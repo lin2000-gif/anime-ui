@@ -1,4 +1,5 @@
 import { ChangeEvent, SyntheticEvent, useState } from "react";
+import Button from 'react-bootstrap/Button';
 
 function MainUiForm() {
   const [malId, setMalId] = useState("");
@@ -15,16 +16,16 @@ function MainUiForm() {
 
   return (
     <>
-      <h1>Welcome to AniCompass!</h1>
+      <h1 className="glow">Welcome to AniCompass!</h1>
       <h2>Enter your MAL username</h2>
       <form>
         <label>
           <input name="myInput" value={malId} onChange={handleTextareaChange} />
           <br></br>
         </label>
-        <button type="submit" onClick={handleClick}>
+        <Button type="submit" onClick={handleClick}>
           Submit
-        </button>
+        </Button>
       </form>
     </>
   );
