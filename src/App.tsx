@@ -7,7 +7,7 @@ function App() {
   return (
     <Routes> 
       <Route path="/" element={<MainUiForm />} />
-      <Route path="/recommendations/:malId" element={<Recommendations/>} />
+      <Route path={`/recommendations/:malId`} element={<Recommendations/>} />
     </Routes>
   );
 }

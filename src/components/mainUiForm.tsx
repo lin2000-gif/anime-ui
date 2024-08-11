@@ -1,8 +1,11 @@
 import { ChangeEvent, SyntheticEvent, useState } from "react";
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from "react-router-dom";
 
 function MainUiForm() {
   const [malId, setMalId] = useState("");
+
+  const navigate = useNavigate();
 
   function handleTextareaChange(e: ChangeEvent<HTMLInputElement>): void {
     setMalId(e.target.value);
@@ -10,8 +13,7 @@ function MainUiForm() {
 
   function handleClick(e: SyntheticEvent): void {
     e.preventDefault();
-    console.log(e);
-    console.log(malId);
+    navigate(`/recommendations/${malId}`)
   }
 
   return (
